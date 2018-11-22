@@ -8,4 +8,4 @@ Scenario: Get Avenger by Id
 Given path 'avengers','aaaa-bbbb-cccc-dddd'
 When method get
 Then status 200
-And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
+And match response == {id: '#string', name: 'IRon Man', secretIdentity: 'Tony Stark'}
