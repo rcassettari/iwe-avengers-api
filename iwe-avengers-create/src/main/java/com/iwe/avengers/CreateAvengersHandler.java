@@ -8,7 +8,7 @@ import com.iwe.avenger.lambda.response.HandlerResponse;
 
 public class CreateAvengersHandler implements RequestHandler<Avenger, HandlerResponse> {
 
-	private AvengerDAO dao;
+	private AvengerDAO dao = new AvengerDAO();
 
 	@Override
 	public HandlerResponse handleRequest(final Avenger newAvenger, final Context context) {

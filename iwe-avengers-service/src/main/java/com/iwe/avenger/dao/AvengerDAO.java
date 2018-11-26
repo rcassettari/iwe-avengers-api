@@ -3,6 +3,7 @@ package com.iwe.avenger.dao;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Random;
 
 import com.iwe.avenger.dynamodb.entity.Avenger;
 
@@ -24,7 +25,11 @@ public class AvengerDAO {
 	}
 
 	public Avenger save(Avenger newAvenger) {
-		return mapper.put(newAvenger.getId(), newAvenger);
+		
+		newAvenger.setId(new Random().nextInt(100) + "abcd");
+		
+		mapper.put(newAvenger.getId(), newAvenger);
+		return newAvenger;
 	}
 
 }
