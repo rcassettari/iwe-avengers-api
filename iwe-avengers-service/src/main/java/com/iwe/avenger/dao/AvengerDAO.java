@@ -32,4 +32,13 @@ public class AvengerDAO {
 		return newAvenger;
 	}
 
+	public void delete(Avenger avenger) {
+		
+	}
+
+	public Avenger update(Avenger avenger) {
+		//mapper.put(avenger.getId(), avenger);
+		return avenger;
+	}
+	
 }

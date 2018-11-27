@@ -52,6 +52,18 @@ Given path 'avengers','not-found-id'
 When method get
 Then status 404
 
+Scenario: Should return not found Avenger for a attempt do update
+
+Given path 'avengers','not-found-id'
+And request {name:'Iron Man' , secretIdentity: 'Tony Stark'}
+When method put
+Then status 404
+
+Scenario: Should return not found Avenger for a attempt to delete
+
+Given path 'avengers','not-found-id'
+When method delete
+Then status 404
 
 
 
