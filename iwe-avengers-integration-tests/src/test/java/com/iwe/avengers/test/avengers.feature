@@ -46,6 +46,12 @@ And request {secretIdentity:'Tony Stark'}
 When method put
 Then status 400
 
+Scenario: Should return not found Avenger
+
+Given path 'avengers','not-found-id'
+When method get
+Then status 404
+
 
 
 
