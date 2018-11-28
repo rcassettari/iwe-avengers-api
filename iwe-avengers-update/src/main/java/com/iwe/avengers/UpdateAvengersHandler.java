@@ -26,7 +26,7 @@ public class UpdateAvengersHandler implements RequestHandler<Avenger, HandlerRes
 		{
 			context.getLogger().log("[#] - Avenger found will be updated: ".concat(avengerRetrieved.get().getName()));
 			
-			Avenger avengerUpdated = dao.update(avenger);
+			Avenger avengerUpdated = dao.save(avenger);
 			
 			return HandlerResponse
 					.builder()
